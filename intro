@@ -1,0 +1,980 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=12pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{units}
+
+\usepackage{cancel}
+\usepackage{physymb}
+
+
+
+
+\usepackage{sectsty} % Allows customizing section commands
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pgf,tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{arrows}
+ \usetikzlibrary{decorations.pathreplacing}
+ \usetikzlibrary{snakes}
+ \usetikzlibrary{spy}
+ \usepackage{setspace}
+ \usepackage{3dplot}
+
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\setlength{\footskip}{30pt} 
+\setlength{\textheight}{680pt} 
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Sarah Lawrence College\\ Division of Science and Mathematics} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Introduction \\ % The assignment title
+\horrule{0.5pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+\author{Classical Mechanics} % Your name
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\onehalfspacing
+\section{Inscription}
+\vspace{1cm}
+\textit{All science is either physics or stamp collecting.}  Ernest Rutherford
+
+\vspace{1cm}
+
+\noindent \textit{The limits of my language means the limits of my world.}  Ludwig Wittgenstein
+
+\vspace{1cm}
+
+\section{Measurement}
+\vspace{1cm}
+$$t = \overbrace{153}^{\textit{Value}} \ \ \overbrace{\text{seconds}}^{\textit{Unit}}$$
+\vspace{1cm}
+$$\begin{tikzpicture}[scale=1.5]
+   \draw[->,thick,-latex] (0,0) -- (4,0) node [anchor=north ,scale=0.7] {$[\text{sec}]$}node [anchor=south ,scale=1] {$t $}; 
+    %  \draw[->,-latex] (1.25,0.15) -- (2.75,0.15)  node [black,midway,above=0pt,yshift=2pt] { $\Delta_1 x_i$}; 
+   \fill[black] (0.25,0) circle (0.5mm) node [anchor=south ,scale=1] {$0$};
+    \fill[black] (2.25,0) circle (0.5mm) node [anchor=south ,scale=1] {$153$};
+   
+   \end{tikzpicture}
+   $$
+\newpage
+\subsection{Units}
+
+\begin{description}
+\item[meter] The meter is the length of the path travelled by light in vacuum during a tim interval of $1/299,792,458$ of a second.
+\item[kilogram] The kilogram is the unit of mass; it is equal to the mass of the international prototype of the kilogram.
+This international prototype is made of platinum-iridium and is kept at the International Bureau of Weights and Measures, Sevres, France.
+\item[second] The second is the duration of $9,192,631,770$ periods of the radiation corresponding
+to the transition between the two hyper fine levels of the ground state of the cesium-133 atom.
+\item[ampere] The ampere is that constant current which, if maintained in two straight parallel
+conductors of infinite length, of negligible circular cross-section, and placed
+one meter apart in vacuum, would produce between these conductors a force
+equal to $2\times10^{-7}$ newton per meter of length.
+\item[kelvin] The kelvin, unit of thermodynamic temperature, is the fraction 1/273.16 of the
+thermodynamic temperature of the triple point of water.
+
+\item[mole] The mole is the amount of substance of a system which contains as many
+elementary entities as there are atoms in $0.012$ kilogram of carbon 12.  When the mole is used, the elementary entities must be specified and may be atoms, molecules, ions, electrons, other particles or specified groups of such particle.
+In this definition, it is understood that the carbon 12 atoms are unbound, at rest and in their ground state.
+\item[candela] The candela is the luminous intensity, in a given direction, of a source that emits
+monochromatic radiation of a frequency $540\times10^{12}$ Hertz and has a radiant intensity in that direction of $1/683$ watt per steradian.
+\end{description}
+
+
+
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ccc}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    Unit Name & Symbol & Quantity            \\ \hline
+    meter     & m           & distance                 \\
+    kilogram  & kg          & mass                     \\
+    second    & s           & time                     \\
+    ampere    & A           & electrical current       \\
+    kelvin    & K           & temperature \\
+    mole      & mol         & number particles         \\
+    candela   & cd          & luminos intensity        \\ \hline
+    radian    & rad         & angle              \\
+    hertz     & Hz = $\nicefrac{1}{\text{s}}$         & frequency          \\
+    newton    & N   = $\nicefrac{\text{kg}\cdot \text{m}}{\text{s}^2}$        & force              \\
+    pascal    & Pa  = $\nicefrac{\text{N}}{\text{m}^2}$        & pressure           \\
+    joule     & J   = $\text{N} \cdot \text{m}$        & energy             \\
+    watt      & W  = $\nicefrac{\text{J}}{\text{s}}$         & power              \\
+    coulomb   & C = $\text{A} \cdot \text{s}$           & electric charge    \\
+    volt      & V = $\nicefrac{\text{J}}{\text{C}}$           & electric potential \\
+    farad     & F = $\nicefrac{\text{C}}{\text{V}}$          & capacitance        \\
+    ohm       & $\Omega$ = $\nicefrac{\text{V}}{\text{A}}$   & resistance         \\
+    tesla     & T  = $\nicefrac{\text{V}\cdot \text{s}}{\text{m}^2}$         & magnetic field     \\
+    henry     & H = $\nicefrac{\text{V}\cdot \text{s}}{\text{A}}$         & inductance         \\
+    becquerel & Bq = $\nicefrac{1}{\text{s}}$           & radioactivity      \\ \hline
+    \end{tabular}
+    & \ \ 
+    &
+    \begin{tabular}{|l|l|l|}
+    \hline
+    Prefix & Symbol & Value      \\ \hline
+    yotta  & Y      & $10^{24}$  \\
+    zetta  & Z      & $10^{21}$  \\
+    exa    & E      & $10^{18}$  \\
+    peta   & P      & $10^{15}$  \\
+    tera   & T      & $10^{12}$  \\
+    giga   & G      & $10^{9}$   \\
+    mega   & M      & $10^{6}$   \\
+    kilo   & k      & $10^{3}$   \\
+    hecto  & h      & $10^{2}$   \\
+    deca   & da     & $10^{1}$   \\ \hline
+    deci   & d      & $10^{-1}$  \\
+    centi  & c      & $10^{-2}$  \\
+    milli  & m      & $10^{-3}$  \\
+    micro  & $\mu\ $ & $10^{-6}$  \\
+    nano   & n      & $10^{-9}$  \\
+    pico   & p      & $10^{-12}$ \\
+    femto  & f      & $10^{-15}$ \\
+    atto   & a      & $10^{-18}$ \\
+    zepto  & z      & $10^{-21}$ \\
+    yocto  & y      & $10^{-24}$ \\ \hline
+    \end{tabular}
+    \end{tabular}
+\end{table}
+
+ \vspace{1cm}
+
+\subsection{Algebra and Similitude}
+\vspace{1cm}
+$$400\   \text{meter} -135\   \text{meter}=(400-135) \text{meter}=265\  \text{meter}$$
+$$\frac{265\ \text{meter}}{153\ \text{second}}=\frac{265}{153}\ \frac{\text{meter}}{\text{second}}=1.73\  \nicefrac{\text{m}}{\text{s}}$$
+
+\newpage
+\subsection{Dimension}
+\vspace{1cm}
+ $$Q=Cl^\alpha m^\beta t^\gamma I^\delta T^\epsilon n^\xi J^\eta$$
+\vspace{1cm}
+ $$\text{dim }Q=\mathbf{L}^\alpha \mathbf{M}^\beta \mathbf{T}^\gamma \mathbf{I}^\delta \mathbf{\Theta}^\epsilon \mathbf{N}^\xi \mathbf{J}^\eta$$
+ \vspace{1cm}
+\subsection{Unit Conversion}
+\vspace{1cm}
+$$1 \text{ mile} = 1609 \text{ meters} \ \ \ \ \ \Longleftrightarrow \ \ \ \ \ \frac{1609 \text{ meters} }{ 1 \text{ mile}}=\frac{ 1 \text{ mile}}{1609 \text{ meters} }=1$$
+$$0.25\  \text{mile }  \frac{1609 \text{ meters} }{ 1 \text{ mile}}=\frac{0.25\cdot 1609}{1} \  \cancel{\text{mile}} \frac{\text{meters} }{\cancel{\text{mile}}}=402 \text{ meters}$$
+
+\vspace{1cm}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|}
+    \hline
+    English $\Longleftrightarrow$ SI                                             \\ \hline
+    $1 \text{ mile} = 5280 \text{ feet} = 1.609 \text{ km} = 1609 \text{ meters}$  \\
+    $1 \text{gallon} = 3.785 \text{ liters} = 4.000 \text{ quarts}$                \\
+    $1 \text{ cm}^3= 1 \text{ milliliter}$                                         \\
+    $1 \text{ hp} = 746 \text{ Watts}$                                             \\
+    $1 \text{ lb} = 4.45 \text{ Newtons}$                                          \\ \hline
+    \end{tabular}
+    \end{table}
+
+
+ \vspace{1cm}
+
+\section{Physical Constants}
+
+\begin{table}[htbp]
+\centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    Earth                                     & Sun \& Moon                              & Water                                                                        \\ \hline
+    $g=9.81 \nicefrac{ \text{m}}{\text{s}^2}$ & $m_{sun}=1.99\times 10^{30} \text{kg}$  & $c_{vapor}=2.08 \times 10^{3} \nicefrac{ \text{m}}{\text{kg}\cdot\text{K}}$  \\
+    $B_{earth}=5.0\times 10^{-5} \text{T}$   & $R_{sun}=6.96\times10^8\text{m}$        & $c_{water}=4.18 \times 10^{3} \nicefrac{ \text{m}}{\text{kg}\cdot\text{K}}$  \\
+    $m_{earth}=5.98\times 10^{24} \text{kg}$  & $m_{moon}=7.36\times 10^{22} \text{kg}$ & $c_{ice}=2.11 \times 10^{3} \nicefrac{ \text{m}}{\text{kg}\cdot\text{K}}$    \\
+    $R_{earth}=6.38\times10^6\text{m}$        & $R_{moon}=1.74\times10^6\text{m}$       & $L_{fusion}=3.3 \times 10^{5} \nicefrac{ \text{J}}{\text{kg}}$ \\
+    $r_{earth}=1.50\times10^{11}\text{m}$       & $r_{moon}=3.84\times10^8\text{m}$       & $L_{vapor}=2.1 \times 10^{6} \nicefrac{ \text{J}}{\text{kg}}$        \\
+    $T_{earth}=365.24\text{ days}$            & $T_{moon}=27.3\text{ days}$             & $\rho_{water}=1.00 \times 10^{6} \nicefrac{ \text{kg}}{\text{m}^3}$          \\ \hline
+    \end{tabular}
+\end{table}
+
+
+\subsection{Universal Physical Constants}
+  
+  \begin{table}[htbp]
+\centering
+ \begin{tabular}{|l|l|l|}
+    \hline
+    Description              & Symbol          & Quantity                                                                \\ \hline
+    Gravitational Constant   & $G$             & $6.67 \times 10^{-11} \nicefrac{ \text{N}\cdot\text{m}^2}{\text{kg}^2}$ \\
+    Electrostatic Constant   & $k_e$           & $8.99 \times 10^{9} \nicefrac{ \text{N}\cdot\text{m}^2}{\text{C}^2}$    \\
+    Boltzmann's Constant     & $k_B$           & $1.38 \times 10^{-23} \nicefrac{ \text{J}}{\text{K}}$                   \\
+    Avogado's Number         & $N_A$           & $6.02 \times 10^{23} $                                                  \\
+    Plank's Constant         & $h$             & $6.63 \times 10^{-34}  \text{J}\cdot\text{s}$                           \\
+    Speed of Light           & $c$             & $3.0 \times 10^{8} \nicefrac{ \text{m}}{\text{s}}$                      \\
+    Fundamental Charge       & $e$             & $1.6 \times 10^{-19} \text{C}$                                          \\
+    Mass of the Electron     & $m_e$           & $9.1 \times 10^{-31} \text{kg}$                                         \\
+    Mass of Proton           & $m_p$           & $1.7 \times 10^{-27} \text{kg}$                                         \\ \hline
+    Gas Constant             & $R$             & $8.31 \nicefrac{ \text{ J}}{\text{mole}\cdot\text{K}}$                  \\
+    Vacuum Permativity       & $\varepsilon_0$ & $8.85 \times 10^{-7} \nicefrac{ \text{F}}{\text{m}}$                    \\
+    Vacuum Permeablity       & $\mu_0$         & $4\pi \times 10^{-7} \nicefrac{ \text{T}\cdot\text{m}}{\text{A}}$       \\
+    Bohr Radius              & $a_0$           & $0.53 \times 10^{-10} \text{m}$                                         \\
+    Fine Structure  Constant & $\alpha$        & $\nicefrac{1}{137}$                                              \\ \hline
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+ $$R=N_Ak_B\ \ \ \ \ \ k_e=\nicefrac{1}{4\pi\varepsilon_0}\ \ \ \ \ \ \mu_0c=\nicefrac{1}{\varepsilon_0c}\ \ \ \ \ \ \alpha=\frac {\mu_0 c e^2}{2 h }\ \ \ \ \ \ a_0 = \frac{ \hbar^2}{m_{\mathrm{e}}k_e e^2} = \frac{\hbar}{m_{\mathrm{e}}\,c\,\alpha}$$
+
+\newpage
+\section{Sets, Sequences \& Series}
+\vspace{1cm}
+$$ \{3\ \text{m}, 5\ \text{m} , 7\ \text{m} \}=\{x_0, x_1 ,x_2\}=\{x_i\}$$
+\vspace{1cm}
+$$\begin{tikzpicture}[scale=1.5]
+   \draw[->,thick,-latex] (-1.75,0) -- (4.25,0) node [anchor=north ,scale=0.7] {$[\text{m}]$}node [anchor=south ,scale=1] {$x $}; 
+     \fill[black] (-0.25,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_0$};
+   \fill[black] (1.25,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_1$};
+    \fill[black] (2.75,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_{2}$};
+   
+   \end{tikzpicture}
+   $$
+\vspace{1cm}
+$$x_0+x_1+x_2=\sum_{i=0}^{2}x_i$$
+\vspace{1cm}
+
+\section{Functions}
+ \vspace{1cm}
+ $$\{x_i,y_i\}$$
+ \vspace{1cm}
+$$y=f(x)$$
+ \vspace{1cm}
+$$
+\begin{tikzpicture}
+      [yscale=1.3, xscale=3.3,line cap=round,line join=round,x=2cm,y=2cm]%main layer
+
+%main layer
+%creating the ticks and xy-axis nodes
+  \draw[-latex,color=black,thin] (-0.2,0) -- (1.4,0) node [anchor=north ,scale=1] {$x$};
+   \draw[-latex,color=black,thin] (0,-0.2) -- (0,1.4)node [anchor=east ,scale=1] {$y$};
+    \draw (1,1) node [anchor=west ,scale=1] {$f(x)$};
+ 
+%some function
+
+ \draw[smooth,samples=1000,domain=-0.2:1.3]
+                             plot(\x,{1/2*(\x*2) ^2-1/24*(\x*2)^4});
+ 
+ 
+\end{tikzpicture}
+$$
+
+\newpage
+\section{Difference}
+\vspace{1cm}
+$$\Delta x = b-a$$ 
+\vspace{1cm}  
+$$\begin{tikzpicture}[scale=1.5]
+   \draw[->,thick,-latex] (0,0) -- (4,0) node [anchor=north ,scale=1] {$x$}; 
+      \draw[->,-latex] (1.25,0.15) -- (2.75,0.15)  node [black,midway,above=0pt,yshift=2pt] { $\Delta x$}; 
+   \fill[black] (1.25,0) circle (0.5mm) node [anchor=north ,scale=1] {$a$};
+    \fill[black] (2.75,0) circle (0.5mm) node [anchor=north ,scale=1] {$b$};
+   \end{tikzpicture}
+$$
+\vspace{1cm}
+$$\begin{tikzpicture}[scale=1.5]
+   \draw[->,thick,-latex] (0,0) -- (4,0) node [anchor=north ,scale=1] {$x$}; 
+      \draw[->,-latex] (1.25,0.15) -- (2.75,0.15)  node [black,midway,above=0pt,yshift=2pt] { $\Delta x_i$}; 
+   \fill[black] (1.25,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_i$};
+    \fill[black] (2.75,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_{i+1}$};
+   
+   \end{tikzpicture}
+   $$
+\vspace{1cm}
+$$\Delta x_i = x_{i+1}-x_i$$
+
+$$\{ \Delta x_i\}=\{x_1 -x_0,x_2-x_1\}=\{(5-3)\ \text{m}, (7-5)\ \text{m} \}=\{2\ \text{m},2\ \text{m}\}$$
+\vspace{1cm}
+ $$\{x_i\}\xrightarrow{\ \ \Delta \ \ }\{ \Delta x_i\}$$
+  
+ \vspace{1cm}
+  
+ \subsection{Derivative}
+
+ \vspace{1cm}
+$$dx= \mathop {\lim }\limits_{\Delta x \to 0} { \Delta x }$$
+
+\newpage
+
+
+\subsection{Difference of a Function}
+\ \ 
+ \vspace{1cm}
+$$
+\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\begin{tikzpicture}
+      [yscale=1.3, xscale=3.3,line cap=round,line join=round,x=2cm,y=2cm,
+     %using the 'spy' to magnify a part of the picture
+     spy using outlines={rectangle,lens={scale=3}, size=4.5cm, connect spies},
+     %using the decoration 'brace' (=a curly brace as path replacement)
+     decoration={brace,amplitude=2pt}]%main layer
+
+%main layer
+%creating the ticks and xy-axis nodes
+  \draw[-latex,color=black,thin] (-0.2,0) -- (1.4,0) node [anchor=north ,scale=1] {$x$};
+   \draw[-latex,color=black,thin] (0,-0.2) -- (0,1.4)node [anchor=east ,scale=1] {$y$};
+    \draw (1,1) node [anchor=west ,scale=1] {$f(x)$};
+ 
+%some function
+
+ \draw[smooth,samples=1000,domain=-0.2:1.3]
+                             plot(\x,{1/2*(\x*2) ^2-1/24*(\x*2)^4});
+ 
+  \draw [darkgray,ultra thin] (0,0.1224)-- (0.25,0.1224);
+  \draw [darkgray,ultra thin] (0,0.914)-- (0.75,0.914);
+  \draw [darkgray,ultra thin] (0.25,0.1224)-- (0.25,0.0);
+  \draw [darkgray,ultra thin] (0.75,0.914)-- (0.75,0);
+%creating the curly braces with decorate
+  \draw [decorate,color=black] (-0.02,0.1224) -- (-0.02,0.914) 
+   node [midway,anchor=east,inner sep=2pt, outer sep=1pt]{\small$\Delta f$};
+  \draw [decorate,color=black!80!black] (0.75,-0.02) -- (0.25,-0.02)
+   node [midway,anchor=north,inner sep=1pt, outer sep=1pt]{\small$\Delta x$};
+\end{tikzpicture}
+$$
+\vspace{1cm}
+$$\Delta f(x_i)= f(x_{i+1})-f(x_i)$$
+$$\Delta f(x_i)=f(x_i+\Delta x_i)-f(x_i)$$
+\vspace{1cm}
+$$d\ f(x) = \mathop {\lim }\limits_{\Delta x \to 0} {\Delta f(x)}$$
+$$d\ f(x)= \mathop {\lim }\limits_{\Delta x \to 0} {f\left( {x + \Delta x } \right) - f\left( x \right)}$$
+\vspace{1cm}
+\subsection{Derivative of a Function}
+\vspace{1cm}
+$$\mathop {\lim }\limits_{\Delta x \to 0} {f\left( {x + \Delta x } \right) - f\left( x \right)}={f^\prime}(x) \mathop {\lim }\limits_{\Delta x \to 0} \Delta x$$
+$$d\ f(x)={f^\prime}(x) dx$$
+\vspace{1cm}
+$${df}= f^\prime(x)\ dx\ \ \  \Longleftrightarrow \ \ \  \frac{df}{dx}={f^\prime}(x) $$
+
+
+\newpage
+
+\subsection{Graphing the Derivative of a Function}
+\ \ \ 
+\vspace{1cm}
+
+$$\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\begin{tikzpicture}
+   [xscale=2,line cap=round,line join=round,x=2cm,y=2cm,
+     %using the 'spy' to magnify a part of the picture
+     spy using outlines={rectangle,lens={scale=2}, size=4cm, connect spies},
+     %using the decoration 'brace' (=a curly brace as path replacement)
+     decoration={brace,amplitude=2pt}]%main layer
+%creating the ticks and xy-axis nodes
+  \draw[-latex,color=black,thin] (-0.2,0) -- (1.4,0) node [anchor=north ,scale=1] {$x$};
+   \draw[-latex,color=black,thin] (0,-0.2) -- (0,1.4)node [anchor=east ,scale=1] {$y$};
+    \draw (1,1) node [anchor=west ,scale=1] {$f(x)$};
+ 
+%some function
+
+ \draw[smooth,samples=1000,domain=0.0:1.3]
+                             plot(\x,{1/2*(\x*2) ^2-1/24*(\x*2)^4});
+ 
+  \draw [darkgray,ultra thin] (0,0.1224)-- (0.25,0.1224);
+  \draw [darkgray,ultra thin] (0,0.235)-- (0.35,0.235);
+  \draw [darkgray,ultra thin] (0.25,0.1224)-- (0.25,0.0);
+  \draw [darkgray,ultra thin] (0.35,0.235)-- (0.35,0);
+%creating the curly braces with decorate
+  \draw [decorate,color=black] (-0.01,0.1224) -- (-0.01,0.235)
+   node [midway,anchor=east,inner sep=2pt, outer sep=1pt]{\tiny$df $};
+  \draw [decorate,color=black!80!black] (0.35,-0.01)--(0.25,-0.01)
+   node [midway,anchor=north,inner sep=1pt, outer sep=2pt]{\tiny$dx$};
+   
+    \draw[smooth,color=red, samples=100,domain=0.05:0.5]
+                             plot(\x,{((0.235-0.1224)/0.1)*(\x-0.25)+0.122});
+
+   
+   \spy [blue!50] on (0.275,0.3)
+             in node [left] at (2.5,0.7);
+             
+                \draw (2.5,0.7) node [anchor=south east,color=red ,scale=1] {slope$=\frac{df}{dx}$};
+\end{tikzpicture}
+$$
+\vspace{1cm}
+
+$$\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\begin{tikzpicture}
+      [line cap=round,line join=round,x=2cm,y=2cm, yscale=1.3, xscale=3.3]
+   
+
+%main layer
+%creating the ticks and xy-axis nodes
+  \draw[-latex,color=black,thin] (-0.2,0) -- (1.4,0) node [anchor=north ,scale=1] {$x$};
+   \draw[-latex,color=black,thin] (0,-0.2) -- (0,1.4)node [anchor=east ,scale=1] {$y$};
+    \draw (0.95,1) node [anchor=west ,scale=1] {$f(x)+C$};
+ 
+%some function
+
+ \draw[smooth,samples=1000,domain=-0.2:1.3] plot(\x,{1/2*(\x*2) ^2-1/24*(\x*2)^4});
+  \draw[smooth,samples=1000,domain=-0.2:1.3,color=black!30] plot(\x,{1/2*(\x*2) ^2-1/24*(\x*2)^4-0.15});
+   \draw[smooth,samples=1000,domain=-0.2:1.3,color=black!30] plot(\x,{1/2*(\x*2) ^2-1/24*(\x*2)^4+0.15});
+ 
+ \begin{scope}[shift={(0,-2)}]
+ 	\draw[smooth,samples=1000,domain=-0.2:1.3,color=red!50, very thick] plot(\x,{(\x*2)-1/6*(\x*2)^3});            
+	\draw[smooth,samples=1000,domain=-0.2:1.3,thin] plot(\x,{(\x*2)-1/6*(\x*2)^3});                   
+	       
+	\draw[-latex,color=black,thin] (-0.2,0) -- (1.4,0) node [anchor=north ,scale=1] {$x$};
+	\draw[-latex,color=black,thin] (0,-0.2) -- (0,1.4)node [anchor=east ,scale=1] {$y$};
+	\draw (0.95,1) node [anchor=west ,scale=1] {$f^\prime(x)$};
+ \end{scope}
+ 
+ \draw[dotted,color=blue!30, very thick] (1.225,-2) -- (1.225,1.65);
+ \draw[dotted,color=blue!30, very thick] (0,-2) -- (0,0.15);
+ \draw[dotted,color=blue!30,very thick] (0.707,-1.057) -- (0.707,0.983);
+ 
+\end{tikzpicture}$$
+
+\newpage
+
+
+
+\section{Anti-Difference}
+\vspace{1cm}
+$$\{\Delta x_i\}\xrightarrow{\ \ \sum \ \ }\{  x_i\}$$
+\vspace{1cm}
+$$\sum_{n=0}^{i-1}\Delta x_n=x_i-x_0$$
+\vspace{1cm}
+$$\begin{tikzpicture}[scale=1]
+   \draw[->,thick,-latex] (-3,0) -- (6,0) node [anchor=north ,scale=1] {$x$}; 
+      \draw[->,-latex] (-2,0.15) -- (1.25,0.15)  node [black,midway,above=0pt,yshift=2pt] { $\Delta x_{0}+\Delta x_{1}+\cdots$}; 
+        \draw[->,-latex] (1.25,0.15) -- (2.75,0.15)  node [black,midway,above=0pt,yshift=2pt] { $\Delta x_{i-2}$}; 
+          \draw[->,-latex] (2.75,0.15) -- (4.25,0.15)  node [black,midway,above=0pt,yshift=2pt] { $\Delta x_{i-1}$}; 
+       \fill[black] (-2,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_0$};
+   \fill[black] (1.25,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_{i-2}$};
+    \fill[black] (2.75,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_{i-1}$};
+     \fill[black] (4.25,0) circle (0.5mm) node [anchor=north ,scale=1] {$x_{i}$};
+     \draw[->,-latex] (-2,1) -- (4.25,1)  node [black,midway,above=0pt,yshift=2pt] { $\sum_{n=0}^{i-1}\Delta x_n$}; 
+
+   
+   \end{tikzpicture}
+   $$
+   \vspace{1cm}
+   \subsection{Anti-Derivative}
+   \vspace{1cm}
+$$\int_{x_0}^{x_i} \  dx = \mathop {\lim }\limits_{\Delta x \to 0}\sum_{n=0}^{i-1}\Delta x_n$$
+\vspace{1cm}
+$$\int_{x_0}^{x_i} \  dx =x_i-x_0$$
+\vspace{1cm}
+$$x_i-x_0=x\biggr \rvert_{x_0}^{x_i}$$
+\newpage
+
+\subsection{Anti-Derivative of a Function}
+\ \ 
+\vspace{1cm}
+$$\sum_{n=0}^{i-1}\Delta f(x_n)=f(x_i)-f(x_0)$$
+\vspace{1cm}
+$$\int_{f(x_0)}^{f(x_i)} \  df = \mathop {\lim }\limits_{\Delta x \to 0}\sum_{n=0}^{i-1}\Delta f(x_n)$$
+\vspace{1cm}
+$$\int_{f(x_0)}^{f(x_i)} \  df =f(x_i)-f(x_0)$$
+\vspace{1cm}
+$$f(x_i)-f(x_0)=f(x)\biggr \rvert_{x_0}^{x_i}$$
+\vspace{1cm}
+$$\int_{f(x_0)}^{f(x_i)} \  df =\int_{x_0}^{x_i} f^\prime(x)\  dx $$
+\vspace{1cm}
+$$\int_{x_0}^{x_i} f^\prime(x)\  dx = f(x)\biggr \rvert_{x_0}^{x_i}$$
+\vspace{1cm}
+$$\int f^\prime(x)\  dx = f(x)+C$$
+
+\newpage 
+\subsection{Graphing the Anti-Derivative of a Function}
+\ \
+\vspace{2cm}
+
+$$\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\definecolor{darkgray}{rgb}{0.25,0.25,0.25}
+\definecolor{lightgray}{rgb}{0.75,0.75,0.75}
+%
+\begin{tikzpicture}
+      [line cap=round,decoration={brace,amplitude=2pt},line join=round,x=2cm,y=2cm, yscale=1.3, xscale=3.3]
+   
+
+%main layer
+%creating the ticks and xy-axis nodes
+  \draw[-latex,color=black,thin] (-0.2,0) -- (1.4,0) node [anchor=north ,scale=1] {$x$};
+   \draw[-latex,color=black,thin] (0,-0.2) -- (0,1.4)node [anchor=east ,scale=1] {$y$};
+    \draw (0.95,1) node [anchor=west ,scale=1] {$f(x)$};
+ 
+%some function
+
+ \draw[smooth,samples=1000,domain=-0.2:1.3] plot(\x,{1/2*(\x*2) ^2-1/24*(\x*2)^4});
+ 
+ 
+ \begin{scope}[shift={(0,-2)}]
+ 	\draw[smooth,samples=1000,domain=-0.2:1.3,color=red!50, very thick] plot(\x,{(\x*2)-1/6*(\x*2)^3});            
+	\draw[smooth,samples=1000,domain=-0.2:1.3,thin] plot(\x,{(\x*2)-1/6*(\x*2)^3});                   
+	       
+	\draw[-latex,color=black,thin] (-0.2,0) -- (1.4,0) node [anchor=north ,scale=1] {$x$};
+	\draw[-latex,color=black,thin] (0,-0.2) -- (0,1.4)node [anchor=east ,scale=1] {$y$};
+	\draw (0.95,1) node [anchor=west ,scale=1] {$f^\prime(x)$};
+	
+	 \foreach \x in {0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7}
+   \fill[color=red!20,thin] (\x,0) -- (\x,{(\x*2)-1/6*(\x*2)^3}) -- (\x+0.05,{(\x*2)-1/6*(\x*2)^3}) -- (\x+0.05,0) -- cycle;
+   \foreach \x in {0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7}
+   \draw[color=darkgray,thin] (\x,0) -- (\x,{(\x*2)-1/6*(\x*2)^3}) -- (\x+0.05,{(\x*2)-1/6*(\x*2)^3}) -- (\x+0.05,0) -- cycle;
+
+  \draw [decorate,color=black!80!black] (0.75,-0.02) -- (0.25,-0.02)
+   node [midway,anchor=north,inner sep=1pt, outer sep=1pt]{\small$\Delta x$};
+ \end{scope}
+ 
+ \draw[dotted,color=blue!30, very thick] (0.25,0.1224) -- (0,0.1224);
+ \draw[dotted,color=blue!30, very thick] (0.75,0.914) -- (0,0.914);
+ \draw[dotted,color=blue!30, very thick] (0.25,0.1224) -- (0.25,-2);
+ \draw[dotted,color=blue!30, very thick] (0.75,0.914) -- (0.75,-2);
+
+ 
+   \draw [decorate,color=black] (-0.02,0.1224) -- (-0.02,0.914) 
+   node [midway,anchor=east,inner sep=2pt, outer sep=1pt]{\small$\Delta f$};
+  
+\end{tikzpicture}$$
+
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+\newpage
+
+\section{Review}
+\ \ 
+\vspace{1cm}
+$$\forall n \in \mathbb{R}: d(x^n)=n\  x^{n-1} dx$$
+$$d(\ln x )=\frac{dx}{x}$$
+$$d(e^x)=e^x\ dx $$
+$$d(\cos x)=-\sin x \ dx $$
+$$d(\sin x)=\cos x\ dx $$
+\vspace{1cm}
+\subsection{Product Rule}
+\vspace{1cm}
+$$d (f\cdot g)=f\cdot d g+g\cdot df$$
+$$
+\begin{tikzpicture}
+      [decoration={brace,amplitude=2pt}, scale=0.75]%main layer
+
+%main layer
+%creating the ticks and xy-axis nodes
+  \draw[color=black, thick] (-2,-2) -- (2,-2) -- (2,2) -- (-2,2)--cycle;
+
+  \draw[color=black] (2,-2)--(2.5,-2) -- (2.5,2)-- (2,2);
+     \draw[color=black] (2.5,-2.1) -- (2.5,-2.5);
+      \draw[color=black] (2,-2.1) -- (2,-2.5);
+       \draw[-latex,color=black] (1.5,-2.3)--(2,-2.3);
+        \draw[-latex,color=black] (3,-2.3)--(2.5,-2.3);
+        
+      \draw[color=black] (-2,2)--(-2,2.5) -- (2,2.5)-- (2,2);
+     \draw[color=black] (-2.1,2.5) -- (-2.5,2.5);
+      \draw[color=black] (-2.1,2) -- (-2.5,2);
+       \draw[-latex,color=black] (-2.3,1.5)--(-2.3,2);
+        \draw[-latex,color=black] (-2.3,3)--(-2.3,2.5);    
+    
+     \draw (0,0) node [anchor=center,scale=1] {$f\cdot g$};
+     \draw (-2,0) node [anchor=east,scale=1] {$f$};
+         \draw (0,-2) node [anchor=north,scale=1] {$g$};
+         \draw (2.25,-2) node [anchor=north,scale=0.8] {$dg$};
+         \draw (-2,2.25) node [anchor=east,scale=0.8] {$df$};
+         \draw (0,2.25) node [anchor=center,scale=0.8] {$g\cdot df$};
+          \draw (2.25,0) node [anchor=center,rotate=-90,scale=0.8] {$f\cdot dg$};
+   
+\end{tikzpicture}
+$$
+\vspace{1cm}
+\subsection{Chain Rule}
+\vspace{1cm}
+$$d f(g)= f^\prime(g)\cdot dg $$
+$$d g(x)= f^\prime(g)\cdot dx$$
+$$d f(g(x))= f^\prime(g(x))\cdot g^\prime(x)\cdot dx$$
+
+
+
+
+
+
+
+
+\section{Scalars and Vectors}
+\vspace{1cm}
+$$\overrightarrow{x}=x\hat{x}$$
+$$|\overrightarrow{x}|=x$$
+$$\hat{x}=\frac{\overrightarrow{x}}{x}$$
+$$|\hat{x}|=1$$
+\vspace{1cm}
+$$
+\begin{tikzpicture}[scale=3,decoration={brace,amplitude=2pt}]
+
+
+
+%draw a vector from origin to point (P) 
+\begin{scope}[rotate=40]
+\draw[-stealth,very thick,color=red] (0,0) -- (1,0) node[anchor=south,color=black]{$\overrightarrow{x}$};
+  \draw[->,thick,color=black] (0,0.07) -- (0.25,0.07) node[anchor=south east,color=black]{$\hat{x}$};
+   \draw [decorate,color=black] (1,-0.07) -- (0,-0.07) 
+   node [midway,anchor=north west,inner sep=2pt, outer sep=2pt]{$x$};
+   \end{scope}
+
+
+
+\end{tikzpicture}
+$$
+
+\section{Spatial Coordinate Systems}
+\subsection{2D Cartesian $(x,y)$}
+\vspace{1cm}
+$$\overrightarrow{r}=\overrightarrow{y}+\overrightarrow{y}=x\hat{x}+y\hat{y}=r_x\hat{x}+r_y\hat{y}$$
+$$ \overrightarrow{r}=\left(\begin{array}{c} x \\ y \end{array}\right)=\left(\begin{array}{c} r_x \\ r_y \end{array}\right)$$
+
+\vspace{1cm}
+$$
+\begin{tikzpicture}[scale=1.5]
+
+
+\draw[thick,->] (0,0,0) -- (3,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,3,0) node[anchor=north west]{$y$};
+
+
+%draw a vector from origin to point (P) 
+\draw[-stealth,very thick,color=red] (0,0) -- (1,2) node[anchor=south west,color=black]{$\overrightarrow{r}$};
+
+
+%draw projection on xy plane, and a connecting line
+\draw[dashed, color=red] (1,0) -- (1,2) node[midway,anchor=west ,scale=1,color=black] {$r_y$};
+\draw[dashed, color=red] (0,2) -- (1,2) node[midway,anchor=south ,scale=1,color=black] {$r_x$};
+\end{tikzpicture}
+$$
+\newpage
+\subsection{Polar Coordinates $(r,\theta)$ }
+\vspace{1cm}
+$$\overrightarrow{r}=r\hat{r}$$
+\vspace{1cm}
+$$r=\sqrt{x^2+y^2}$$
+$$\theta=\tan^{-1}\left(\frac{y}{x}\right)$$
+\vspace{1cm}
+
+$$
+\begin{tikzpicture}[scale=1.5]
+
+
+\draw[thick,->] (0,0,0) -- (3,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,3,0) node[anchor=north west]{$y$};
+
+
+%draw a vector from origin to point (P) 
+\draw[-stealth,very thick,color=red] (0,0) -- (1,2) node[anchor=south west,color=black]{$\overrightarrow{r}$};
+\draw[color=red] (0,0) -- (0.5,1) node[anchor=south east ,color=black]{$r$};
+
+
+%draw projection on xy plane, and a connecting line
+\draw (0.75,0) arc (0:60:0.75) ;
+\draw (0.25,0.1) node [anchor=south west,color=black]{$\theta$};
+\end{tikzpicture}
+$$
+\vspace{1cm}
+$$x=r\cos\theta$$
+$$y=r\sin\theta$$
+\vspace{1cm}
+$$\hat{r}=\frac{\overrightarrow{r}}{r}=\frac{x\hat{x}+y\hat{y}}{\sqrt{x^2+y^2}}=\frac{r\cos \theta\hat{x}+r\sin \theta\hat{y}}{\sqrt{(r\cos \theta)^2+(r\sin \theta)^2}}=\cos \theta\hat{x}+\sin \theta\hat{y}$$
+
+\newpage
+
+\subsection{3D Cartesian $(x,y,z)$}
+\vspace{1cm}
+$$\overrightarrow{\scriptr}=\overrightarrow{x}+\overrightarrow{y}+\overrightarrow{z}=x\hat{x}+y\hat{y}+z\hat{z}=\scriptr_x\hat{x}+\scriptr_y\hat{y}+\scriptr_z\hat{z}$$
+$$ \overrightarrow{\scriptr}=\left(\begin{array}{c} x \\ y \\ z\end{array}\right)=\left(\begin{array}{c} \scriptr_x \\ \scriptr_y \\ \scriptr_z\end{array}\right)$$
+
+\tdplotsetmaincoords{60}{110}
+\begin{tikzpicture}[scale=1.2,tdplot_main_coords]
+\coordinate (O) at (0,0,0);
+\coordinate (P) at (1,2,3);
+
+\draw[thick,->] (0,0,0) -- (4,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,4) node[anchor=south]{$z$};
+
+%draw a vector from origin to point (P) 
+\draw[-stealth,color=red] (O) -- (P) node[anchor=south,color=black]{$\overrightarrow{\scriptr}$};
+
+
+%draw projection on xy plane, and a connecting line
+\draw[dashed, color=red] (1,0,0) -- (1,2,0);
+\draw[dashed, color=red] (0,2,0) -- (1,2,0);
+\draw[dashed, color=red] (1,2,3) -- (1,2,0);
+
+\draw (0.5,2,0) node [anchor=west ,scale=1] {$\scriptr_x$};
+\draw (1,1,0) node [anchor=north ,scale=1] {$\scriptr_y$};
+\draw (1,2,1.5) node [anchor=west ,scale=1] {$\scriptr_z$};
+
+%draw the angle \phi, and label it
+%syntax: \tdplotdrawarc[coordinate frame, draw options]{center point}{r}{angle}{label options}{label}
+%\tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north}{$\phi$}
+
+
+%set the rotated coordinate system so the x'-y' plane lies within the
+%"theta plane" of the main coordinate system
+%syntax: \tdplotsetthetaplanecoords{\phi}
+%\tdplotsetthetaplanecoords{\phivec}
+
+%draw theta arc and label, using rotated coordinate system
+%\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
+
+\end{tikzpicture}
+
+\subsection{Cylindrical $(r,\theta,z)$}
+$$\overrightarrow{\scriptr}=\overrightarrow{r}+\overrightarrow{z}=r\hat{r}+z\hat{z}=\scriptr_r\hat{r}+\scriptr_z\hat{z}$$
+
+
+
+
+
+
+\tdplotsetmaincoords{60}{110}
+\begin{tikzpicture}[scale=1.2,tdplot_main_coords]
+\coordinate (O) at (0,0,0);
+\coordinate (P) at (1,2,3);
+
+\draw[thick,->] (0,0,0) -- (4,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,4) node[anchor=south]{$z$};
+
+%draw a vector from origin to point (P) 
+\draw[-stealth,thick,color=red] (O) -- (P) node[anchor=south,color=black]{$\overrightarrow{\scriptr}$};
+
+
+%draw projection on xy plane, and a connecting line
+
+\draw[dashed, color=red] (0,0,0) -- (1,2,0);
+\draw[dashed, color=red] (1,2,3) -- (1,2,0);
+
+
+\draw (0.5,1,0) node [anchor=north ,scale=1] {$\scriptr_r$};
+\draw (1,2,1.5) node [anchor=west ,scale=1] {$\scriptr_z$};
+
+%draw the angle \phi, and label it
+%syntax: \tdplotdrawarc[coordinate frame, draw options]{center point}{r}{angle}{label options}{label}
+\tdplotdrawarc{(O)}{0.8}{0}{60}{anchor=north}{$\theta$}
+
+
+%set the rotated coordinate system so the x'-y' plane lies within the
+%"theta plane" of the main coordinate system
+%syntax: \tdplotsetthetaplanecoords{\phi}
+%\tdplotsetthetaplanecoords{\phivec}
+
+%draw theta arc and label, using rotated coordinate system
+%\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
+
+\end{tikzpicture}
+\hspace{1cm}
+\tdplotsetmaincoords{60}{110}
+\begin{tikzpicture}[scale=1,tdplot_main_coords]
+\coordinate (O) at (0,0,0);
+\coordinate (P) at (1,2,0);
+
+\draw[thick,->] (0,0,0) -- (4,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,4,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,4) node[anchor=south]{$z$};
+
+%draw a vector from origin to point (P) 
+\draw[-stealth,color=red] (O) -- (P) node[anchor=north,color=black]{$\overrightarrow{r}$};
+
+
+%draw projection on xy plane, and a connecting line
+
+
+%draw the angle \phi, and label it
+%syntax: \tdplotdrawarc[coordinate frame, draw options]{center point}{r}{angle}{label options}{label}
+\tdplotdrawarc{(O)}{0.8}{0}{60}{anchor=north}{$\theta$}
+
+
+%set the rotated coordinate system so the x'-y' plane lies within the
+%"theta plane" of the main coordinate system
+%syntax: \tdplotsetthetaplanecoords{\phi}
+%\tdplotsetthetaplanecoords{\phivec}
+
+%draw theta arc and label, using rotated coordinate system
+%\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
+
+\end{tikzpicture}
+\newpage
+\subsection{Spherical $(\scriptr,\theta,\phi)$}
+\vspace{1cm}
+$$\overrightarrow{\scriptr}=\scriptr \ \hat{\scriptr}$$
+\vspace{1cm}
+$$\scriptr=\sqrt{x^2+y^2+z^2}$$
+$$\theta=\tan^{-1}\left(\frac{y}{x}\right)$$
+$$\phi=\tan^{-1}\left(\frac{r}{z}\right)$$
+
+
+\tdplotsetmaincoords{60}{110}
+
+%define polar coordinates for some vector
+%TODO: look into using 3d spherical coordinate system
+\pgfmathsetmacro{\rvec}{.8}
+\pgfmathsetmacro{\thetavec}{30}
+\pgfmathsetmacro{\phivec}{60}
+
+%start tikz picture, and use the tdplot_main_coords style to implement the display 
+%coordinate transformation provided by 3dplot
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+%set up some coordinates 
+%-----------------------
+\coordinate (O) at (0,0,0);
+
+%determine a coordinate (P) using (r,\theta,\phi) coordinates.  This command
+%also determines (Pxy), (Pxz), and (Pyz): the xy-, xz-, and yz-projections
+%of the point (P).
+%syntax: \tdplotsetcoord{Coordinate name without parentheses}{r}{\theta}{\phi}
+\tdplotsetcoord{P}{\rvec}{\thetavec}{\phivec}
+
+%draw figure contents
+%--------------------
+
+%draw the main coordinate system axes
+\draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+
+%draw a vector from origin to point (P) 
+\draw[-stealth,color=red] (O) -- (P) node[anchor=south,color=black]{$\overrightarrow{\scriptr}$};
+\draw[color=red] (O) -- (P) node[midway,anchor=north west,color=black]{$\scriptr$};
+
+%draw projection on xy plane, and a connecting line
+\draw[dashed,-stealth, color=red] (O) -- (Pxy);
+%\draw[dashed, color=red] (P) -- (Pxy);
+
+%draw the angle \phi, and label it
+%syntax: \tdplotdrawarc[coordinate frame, draw options]{center point}{r}{angle}{label options}{label}
+\tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north}{$\theta$}
+
+
+%set the rotated coordinate system so the x'-y' plane lies within the
+%"theta plane" of the main coordinate system
+%syntax: \tdplotsetthetaplanecoords{\phi}
+\tdplotsetthetaplanecoords{\phivec}
+
+%draw theta arc and label, using rotated coordinate system
+\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\phi$}
+
+\end{tikzpicture}
+\vspace{1cm}
+
+$$r=\scriptr \ \sin \phi $$
+$$z=\scriptr \ \cos \phi $$
+$$x=\scriptr\  \sin \phi\ \cos\theta$$
+$$y=\scriptr\  \sin \phi\ \sin\theta$$
+
+\newpage
+
+\section{Vector Operations}
+\subsection{Dot Product}
+$$\overrightarrow{\scriptr_1}\cdot \overrightarrow{\scriptr_2}=\left(\begin{array}{c} x_1 \\ y_1 \\ z_1\end{array}\right)\left(\begin{array}{ccc} x_2 & y_2 & z_2\end{array}\right)= x_1x_2+y_1y_2+z_1z_2$$
+\vspace{1cm}
+$$|\overrightarrow{\scriptr}|=\scriptr=\sqrt{\overrightarrow{\scriptr}\cdot \overrightarrow{\scriptr}}= \sqrt{x^2+y^2+z^2}$$
+\vspace{1cm}
+$$\overrightarrow{\scriptr_1}\cdot \overrightarrow{\scriptr_2}= \scriptr_1\scriptr_2 \cos \gamma$$
+\vspace{1cm}
+$$
+\begin{tikzpicture}[scale=1.2,tdplot_main_coords,decoration={brace,amplitude=2pt}]
+\draw [thick,->] (0,0) -- (1,2) node[anchor=south,color=black]{$\overrightarrow{\scriptr_2}$};
+\draw [thick,->] (0,0) -- (2,0) node[anchor=south east,color=black]{$\overrightarrow{\scriptr_1}$};
+\tdplotdrawarc{(0,0)}{0.8}{0}{60}{anchor=north}{$\gamma$}
+\end{tikzpicture}
+$$
+
+\subsection{Cross Product}
+\vspace{1cm}
+$$\overrightarrow{\scriptr_1}\times\overrightarrow{\scriptr_2}=\begin{vmatrix}
+\hat{x}&\hat{y}&\hat{z}\\
+x_1&y_1&z_1\\
+x_2&y_2&z_2\\
+\end{vmatrix}=(y_1z_2-z_1y_2)\hat{x}+(z_1x_2-x_1z_2)\hat{y}+(x_1y_2-y_1x_2)\hat{z}$$
+\vspace{1cm}
+$$
+\begin{tikzpicture}[scale=1.2,tdplot_main_coords,decoration={brace,amplitude=2pt}]
+\draw [thick,->] (0,0,0) -- (1,2,0) node[anchor=south,color=black]{$\overrightarrow{\scriptr_2}$};
+\draw [thick,->] (0,0,0) -- (2,0,0) node[anchor=south east,color=black]{$\overrightarrow{\scriptr_1}$};
+\draw [thick,->] (0,0,0) -- (0,0,1.414) node[anchor=east,color=black]{$\overrightarrow{\scriptr_1}\times\overrightarrow{\scriptr_2}$};
+\tdplotdrawarc{(0,0,0)}{0.8}{0}{60}{anchor=north}{$\gamma$}
+\draw  (.4,0,0) -- (.4,0,.4) -- (0,0,.4);
+\draw  (0.133,.266,0) -- (0.133,.266,.4) -- (0,0,.4);
+\end{tikzpicture}
+$$
+\vspace{1cm}
+$$|\overrightarrow{\scriptr_1}\times\overrightarrow{\scriptr_2}|=\scriptr_1\scriptr_2 \sin \gamma$$
+
+\end{document}
